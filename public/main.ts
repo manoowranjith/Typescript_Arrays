@@ -52,7 +52,7 @@ export class ArrayComponent implements ArrayService {
     }
 
     public arraySort(myArray:any):Array<string>{
-        myArray.sort((a, b) => a - b);
+        myArray.sort();
         return myArray
     }
 
@@ -70,12 +70,13 @@ export class ArrayComponent implements ArrayService {
 
 let myArray: number[] = [34, 45, 60, 23, 13, 25, 70];
 let myArray_mixed: any[] =[34, "A", 45, 60, 23, "B", 13, 25, 70]
+let myArray_strings :string[] =["A", "C", "B", "D"]
 let array = new ArrayComponent();
 
 console.log(array.arrayMultiply(myArray));
 console.log(array.arraySeparate(myArray_mixed));
 console.log(array.arraySplit(myArray.map(function(e){return e.toString()})));
-console.log(array.arraySort(myArray));
+console.log(array.arraySort(myArray_strings));
 console.log(array.arrayReplace(myArray));
 
 
