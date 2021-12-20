@@ -41,7 +41,7 @@ var ArrayComponent = /** @class */ (function () {
         // return array_number
     };
     ArrayComponent.prototype.arraySort = function (myArray) {
-        myArray.sort(function (a, b) { return a - b; });
+        myArray.sort();
         return myArray;
     };
     ArrayComponent.prototype.arrayReplace = function (myArray) {
@@ -57,9 +57,10 @@ var ArrayComponent = /** @class */ (function () {
 exports.ArrayComponent = ArrayComponent;
 var myArray = [34, 45, 60, 23, 13, 25, 70];
 var myArray_mixed = [34, "A", 45, 60, 23, "B", 13, 25, 70];
+var myArray_strings = ["A", "C", "B", "D"];
 var array = new ArrayComponent();
 console.log(array.arrayMultiply(myArray));
 console.log(array.arraySeparate(myArray_mixed));
 console.log(array.arraySplit(myArray.map(function (e) { return e.toString(); })));
-console.log(array.arraySort(myArray));
+console.log(array.arraySort(myArray_strings));
 console.log(array.arrayReplace(myArray));
